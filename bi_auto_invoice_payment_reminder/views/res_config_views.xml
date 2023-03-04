@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+	<record id="res_config_settings_view_form_inherit_unique" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="account.res_config_settings_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//div[@id='account_vendor_bills']" position="after">
+				<!-- <h2>Reminder Customer Payment</h2>
+				<group>
+					<div class="row mt16 o_settings_container">
+						<div class="col-xs-12 col-md-6 o_setting_box">
+							<div class="o_setting_left_pane">
+                                <field name="payment_reminder"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                    <label for="payment_reminder" string="Enable Payment Reminder" style="font-weight:bold;"/>
+                                    <div class="text-muted">
+                                        Send Mail to Customer if their any payment are pending
+                                    </div>
+                                    <div>
+                                		<button name="%(bi_auto_invoice_payment_reminder.action_payment_reminder)d" icon="fa-arrow-right" type="action" string="Configure Payment Reminder" class="btn-link"
+                                    	attrs="{'invisible': [('payment_reminder', '=', False)]}"/>
+                            		</div>
+							</div>
+							
+						</div>
+					</div>
+				</group> -->
+				<h2>Reminder Customer Payment</h2>
+                        <div class="row mt16 o_settings_container" id="storno">
+                            <div class="col-12 col-lg-6 o_setting_box"
+                                id="reminder_customer"
+                                title="Allow you to track payment">
+                                <div class="o_setting_left_pane">
+                                    <field name="payment_reminder"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="payment_reminder" string="Enable Payment Reminder" style="font-weight:bold;"/>
+                                    <div class="text-muted">
+                                        Send Mail to Customer if their any payment are pending
+                                    </div>
+                                    <div>
+                                		<button name="%(bi_auto_invoice_payment_reminder.action_payment_reminder)d" icon="fa-arrow-right" type="action" string="Configure Payment Reminder" class="btn-link"
+                                    	attrs="{'invisible': [('payment_reminder', '=', False)]}"/>
+                            		</div>
+                                </div>
+                            </div>
+                        </div>
+			</xpath>
+		</field>
+	</record>
+
+	
+</odoo>

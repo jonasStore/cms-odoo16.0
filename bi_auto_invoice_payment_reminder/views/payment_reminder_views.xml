@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+    	<record id="payment_reminder_view_form" model="ir.ui.view">
+    		<field name="name">payment.reminder.view.form</field>
+    		<field name="model">payment.reminder</field>
+    		<field name="arch" type="xml">
+    			<form string="Payment Reminder">
+                    <sheet>
+                        <div class="oe_title">
+                                <h1><field name="name_seq" class="oe_inline" readonly="1"/></h1>
+                           </div>
+                        <group>
+    	                    <group>
+    	                        <field name="reminder"/>
+    	                        <field name="mail_template"/>
+    	                    </group>
+    	                    <group>
+    	                        <field name="reminder_day"/>
+    	                        <field name="company_id"/>    								                        
+    	                    </group>
+    	                </group>
+                        <div class="alert alert-info" role="alert">
+                           Note :- Set 0 in days field if you want to send Mail on due date. in this case reminder selection before/after does not matter
+                        </div>
+                    </sheet>
+                </form>	
+    		</field>
+    	</record>
+
+
+    	<record id="payment_reminder_view_tree" model="ir.ui.view">
+            <field name="name">payment.reminder.view.tree</field>
+            <field name="model">payment.reminder</field>
+            <field name="arch" type="xml">
+                <tree string="Payment Reminder">
+                	<field name="name_seq"/>
+                    <field name="reminder"/>
+                    <field name="mail_template"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_payment_reminder" model="ir.actions.act_window">
+            <field name="name">Payment Reminders</field>
+            <field name="res_model">payment.reminder</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

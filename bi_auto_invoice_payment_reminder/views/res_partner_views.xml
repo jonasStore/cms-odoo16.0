@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+    <odoo> 
+        <record id="payment_reminder_history_form_inherit" model="ir.ui.view">
+            <field name="name">payment.reminder.history.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"></field>
+            <field name="arch" type="xml">  
+                <xpath expr="//notebook/page[2]" position="after">
+                    <page string="Payment Reminder History">
+                        <field name="payment_reminder_ids">
+                            <tree string="Payment Histoiry" editable="bottom">
+                                <field name="partner_id"/>
+                                <field name="invoice_ref"/>
+                                <field name="mail_date"/>
+                                <field name="mail_template"/>
+                                <field name="due_date"/>
+                               
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </odoo>

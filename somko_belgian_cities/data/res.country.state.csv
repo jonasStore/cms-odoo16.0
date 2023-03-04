@@ -1,0 +1,12 @@
+id,name,country_id/id,code
+state_be_1,Antwerpen,base.be,ANT
+state_be_2,Waals-Brabant,base.be,WBR
+state_be_3,Brussels Hoofdstedelijk Gewest,base.be,BRU
+state_be_4,Henegouwen,base.be,HEN
+state_be_5,Luik,base.be,LUI
+state_be_6,Limburg,base.be,LIM
+state_be_7,Luxembourg,base.be,LUX
+state_be_8,Namen,base.be,NAM
+state_be_9,Oost-Vlaanderen,base.be,OVL
+state_be_10,Vlaams-Brabant,base.be,VBR
+state_be_11,West-Vlaanderen,base.be,WVL
